@@ -1,6 +1,38 @@
 # Docker 101
 > Uma jornada introdutória ao Docker
 
+## Introdução
+
+[Docker](https://www.docker.com/) é a uma solução de containerização de sistemas.
+
+Containeres permitem que uma aplicação rode em completo isolamento em um sistema
+host através de virtualização a nível de SO, mas de forma mais leve que as
+soluções completas de virtualização (VMs).
+
+Um sistema configurado como host pode executar vários containeres, cada um com
+suas dependências e configurações específicas e todos com acesso ao kernel e hardware do host.
+
+Um container possui seu próprio sistema de arquivos, assim como SO, que não
+precisa ser o mesmo do host.
+
+## Funcionamento
+
+Um container é criado a partir de uma imagem que contém uma representação completa
+de seu sistema de arquivos, assim como configurações de rede, inicialização, etc.
+
+A plataforma [Docker Hub](https://hub.docker.com/) contém diversas imagens prontas de sistemas para aplicações,
+assim como para bancos de dados e outras funcionalidades. Nela, cada imagem publicada (podem ser publicadas por organizações e usuários) é um repositório que
+pode ser referenciado para desenvolvimento ou deploy.
+
+Existem duas maneiras de criar uma imagem personalizada:
+
+1. Inicializar um container a partir de uma imagem padrão, conectar-se por meio
+de shell, instalar e configurar manualmente sua aplicação e então tirar um
+snapshot do container, criando assim sua imagem;
+
+2. Utilizar um script (Dockerfile) que é executado pelo Docker para criar a imagem
+de container.
+
 Dúvidas sobre os comandos no Dockerfile? Consulte a documentação [aqui](https://docs.docker.com/engine/reference/builder/).
 
 
